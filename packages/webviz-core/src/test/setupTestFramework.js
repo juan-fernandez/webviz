@@ -45,7 +45,11 @@ afterEach(() => {
     // Reset the error handler to the default (no error handler).
     reportError.setErrorHandler(null);
     // $FlowFixMe
-    fail(`reportError has been called during this test (call reportError.expectCalledDuringTest(); at the end of your test if you expect this): ${JSON.stringify(calls)}`); // eslint-disable-line
+    fail(
+      `reportError has been called during this test (call reportError.expectCalledDuringTest(); at the end of your test if you expect this): ${JSON.stringify(
+        calls
+      )}`
+    ); // eslint-disable-line
   }
 });
 
